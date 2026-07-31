@@ -1,0 +1,5 @@
+{"generated_at":"2026-07-31T13:55:00Z","stage":"A: the frontier","phase1_done":17,"phase1_total":148,"verified_total":10618,"rate_per_hour":0,"eta_hours":null,"tripwires":[
+{"id":"T1","ok":true,"label_ok":"yes","label_fired":"decayed, campaign stops and reports"},
+{"id":"T2","ok":true,"label_ok":"holding","label_fired":"padding detected, campaign stops and reports"},
+{"id":"T3","ok":true,"label_ok":"yes","label_fired":"anomaly, campaign stops and reports"}],
+"per_shard":[]}

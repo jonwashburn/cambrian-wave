@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cambrian Wave: live theorem discovery</title>
+<meta name="description" content="A machine is composing mathematics with itself right now. Live count of theorems conjectured, proved, and kernel-certified in the Cambrian campaign.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0c; --gray: #5b5953; --paper: #f4f3ef;
+    --green: #0b7a3e; --red: #c8401f; --line: #ddd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fff; color: var(--ink); font: 16px/1.55 Inter, system-ui, sans-serif; }
+  main { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  .mark { font: 1.6rem Archivo Black, sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+  .dateline { font: .72rem "JetBrains Mono", monospace; color: var(--gray); text-transform: uppercase; letter-spacing: .12em; margin-top: .35rem; }
+  h2 { font: .72rem "JetBrains Mono", monospace; color: var(--gray); text-transform: uppercase; letter-spacing: .14em;
+       border-top: 1px solid var(--ink); padding-top: .45rem; margin: 2.8rem 0 1rem; }
+  p { max-width: 42rem; margin-bottom: .9rem; }
+  .focal { border: 2.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); background: var(--paper);
+           padding: 1.6rem 1.8rem; margin: 1.8rem 0 0; }
+  .bignum { font: 700 3.4rem/1.05 "JetBrains Mono", monospace; }
+  .biglabel { font: .72rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .14em; color: var(--gray); }
+  .rate { font: .85rem "JetBrains Mono", monospace; color: var(--green); margin-top: .35rem; }
+  table.live { width: 100%; border-collapse: collapse; font: .8rem "JetBrains Mono", monospace; margin-top: .6rem; }
+  table.live td { border-top: 1px solid var(--line); padding: .5rem .2rem; vertical-align: top; }
+  table.live td:first-child { color: var(--gray); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; padding-top: .65rem; width: 11rem; }
+  .ok { color: var(--green); font-weight: 700; }
+  .fired { color: var(--red); font-weight: 700; }
+  .mono { font-family: "JetBrains Mono", monospace; font-size: .8rem; }
+  .chart { margin-top: 1.2rem; }
+  .cap { font: .68rem "JetBrains Mono", monospace; color: var(--gray); margin-top: .4rem; }
+  a { color: var(--ink); }
+  footer { margin-top: 3.5rem; border-top: 2px solid var(--ink); padding-top: 1rem; font: .72rem "JetBrains Mono", monospace; color: var(--gray); }
+  @media (max-width: 640px) { .focal { box-shadow: none; } .bignum { font-size: 2.4rem; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">The Cambrian Wave</div>
+  <div class="dateline">Recognition Physics Institute &middot; live instrument &middot; <span id="updated">first light 31 July 2026</span></div>
+
+  <p style="margin-top:1.6rem">A machine is composing mathematics with itself right now. Each theorem counted
+  below was conjectured and proved by the machine, and every proof was certified by the Lean kernel, the same
+  referee that checks the human library. Nothing enters the count that the kernel did not accept.</p>
+
+  <div class="focal">
+    <div class="biglabel">Theorems certified, and counting</div>
+    <div class="bignum" id="count">10,618</div>
+    <div class="rate" id="rate">campaign live</div>
+  </div>
+
+  <h2>Live status</h2>
+  <table class="live">
+    <tr><td>Stage</td><td id="stage">A: the frontier</td></tr>
+    <tr><td>Library processed</td><td><span id="shards">17 of 148 slices</span> <span id="eta" style="color:var(--gray)"></span></td></tr>
+    <tr><td>New mathematics still growing</td><td id="t1" class="ok">yes</td></tr>
+    <tr><td>No padding with duplicates</td><td id="t2" class="ok">holding</td></tr>
+    <tr><td>Failures nominal</td><td id="t3" class="ok">yes</td></tr>
+  </table>
+
+  <h2>The wave</h2>
+  <p>Each bar is one slice of the library. Its height is the share of newly manufactured endpoints that the next
+  round of composition can still grow. As long as the bars stay high, the machine is not running out of new
+  mathematics; the campaign stops the day they decay.</p>
+  <div class="chart" id="chart"><span class="cap">chart arrives with the first live update</span></div>
+  <div class="cap">share of endpoints still growing, per library slice. Instrument state: <a href="cambrian-wave.json">cambrian-wave.json</a> (machine-readable, updates with the campaign).</div>
+
+  <h2>What this is</h2>
+  <p>The Recognition Physics Institute built a composition organ over the largest library of certified mathematics
+  in the world plus the institute's own derivations. The organ pairs existing theorems, attempts the compositions
+  mathematicians never wrote down, and keeps only what is new and what the kernel certifies. It then feeds its own
+  output back in as raw material, so each generation of theorems composes the previous one. This page reports that
+  campaign as it runs.</p>
+  <p>Two kinds of support, stated plainly: every theorem in the count is kernel-certified (the strongest support
+  mathematics has), and the stopping rule is preregistered: the campaign halts and reports if novelty decays,
+  duplication rises, or failures break out of their measured envelope.</p>
+
+  <h2>Receipts</h2>
+  <p class="mono" style="max-width:none">
+    The institute: <a href="https://recognitionphysics.org">recognitionphysics.org</a><br>
+    The public certified library: <a href="https://github.com/jonwashburn/recognition-science">github.com/jonwashburn/recognition-science</a><br>
+    Live instrument state: <a href="cambrian-wave.json">cambrian-wave.json</a>
+  </p>
+
+  <footer>Recognition Physics Institute &middot; this page is an instrument readout, not a claim beyond it</footer>
+</main>
+<script>
+(function () {
+  function fmt(n) { return n.toLocaleString("en-US"); }
+  function ago(iso) {
+    var s = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);
+    if (s < 90) return Math.round(s) + "s ago";
+    if (s < 5400) return Math.round(s / 60) + "m ago";
+    return (s / 3600).toFixed(1) + "h ago";
+  }
+  function poll() {
+    fetch("cambrian-wave.json?t=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
+      document.getElementById("count").textContent = fmt(d.verified_total);
+      document.getElementById("rate").textContent = d.rate_per_hour > 0 ? "+" + fmt(Math.round(d.rate_per_hour)) + " per hour" : "campaign live";
+      document.getElementById("stage").textContent = d.stage;
+      document.getElementById("shards").textContent = d.phase1_done + " of " + d.phase1_total + " slices";
+      document.getElementById("eta").textContent = d.eta_hours ? "about " + d.eta_hours + "h of frontier remain" : "";
+      document.getElementById("updated").textContent = "updated " + ago(d.generated_at);
+      ["t1", "t2", "t3"].forEach(function (k, i) {
+        var el = document.getElementById(k), t = d.tripwires[i];
+        el.textContent = t.ok ? t.label_ok : t.label_fired;
+        el.className = t.ok ? "ok" : "fired";
+      });
+    }).catch(function () {});
+  }
+  poll();
+  setInterval(poll, 30000);
+})();
+</script>
+</body>
+</html>
