@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-07-31T17:52:51Z",
+ "generated_at": "2026-07-31T17:55:11Z",
  "stage": "A: the frontier",
  "stage_detail": "",
- "phase1_done": 39,
+ "phase1_done": 41,
  "phase1_total": 148,
- "verified_total": 309692,
- "in_flight": 45383,
- "rate_per_hour": 39931.4,
- "eta_hours": 21.6,
+ "verified_total": 349090,
+ "in_flight": 5526,
+ "rate_per_hour": 79282.3,
+ "eta_hours": 18.8,
  "tripwires": [
   {
    "id": "T1",
@@ -182,8 +182,16 @@
    "growing_pct": 84.2
   },
   {
+   "shard": 38,
+   "growing_pct": 86.2
+  },
+  {
    "shard": 39,
    "growing_pct": 84.8
+  },
+  {
+   "shard": 40,
+   "growing_pct": 84.7
   }
  ],
  "campaign_stop": false,
