@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-07-31T17:15:19Z",
+ "generated_at": "2026-07-31T17:17:30Z",
  "stage": "A: the frontier",
  "stage_detail": "slices 37, 38, 39, 40: probes",
  "phase1_done": 37,
  "phase1_total": 148,
  "verified_total": 309692,
  "in_flight": 4794,
- "rate_per_hour": 76802.9,
- "eta_hours": 19.8,
+ "rate_per_hour": 76778.0,
+ "eta_hours": 20.2,
  "tripwires": [
   {
    "id": "T1",
@@ -178,5 +178,48 @@
    "growing_pct": 84.3
   }
  ],
- "campaign_stop": false
+ "campaign_stop": false,
+ "discoveries": {
+  "generated": "2026-07-31 17:17:06",
+  "banked": 313223,
+  "parent_usage_gen1": 0.6214,
+  "items": [
+   {
+    "name": "qS29_H1_560",
+    "kind": "bridge",
+    "fanout": 26,
+    "conclusion": "\u2200 (v : Fin (8 : Nat) \u2192 Complex) (r : Real) (hr : LT.lt (0 : Real) r) (M : LightLanguage.CPM.MeaningForced.MeaningObject)   (\u03b1 : Type u0) (s : Set \u03b1) (f : \u03b1 \u2192 IndisputableMonolith.Verification.MeaningPeriodicTable.WTokenM"
+   },
+   {
+    "name": "qS29_H1_561",
+    "kind": "bridge",
+    "fanout": 18,
+    "conclusion": "\u2200 (v : Fin (8 : Nat) \u2192 Complex) (r : Real) (hr : LT.lt (0 : Real) r) (M : LightLanguage.CPM.MeaningForced.MeaningObject)   (\u03b1 : Sort u0) (f : \u03b1 \u2192 IndisputableMonolith.Verification.MeaningPeriodicTable.WTokenMode),   Func"
+   },
+   {
+    "name": "qS29_H1_562",
+    "kind": "bridge",
+    "fanout": 4,
+    "conclusion": "\u2200 (v : Fin (8 : Nat) \u2192 Complex) (r : Real) (hr : LT.lt (0 : Real) r)   (M : LightLanguage.CPM.MeaningForced.MeaningObject),   Iff (Eq (LightLanguage.CPM.MeaningForced.Meaning v r hr) (Option.some M))     (Exists fun (a :"
+   },
+   {
+    "name": "qS06_H1_234",
+    "kind": "hub",
+    "fanout": 64,
+    "conclusion": "\u2200 (a b c : Prop), Not (Or b c) \u2192 Iff (Or (Or a b) c) (Or a c)"
+   },
+   {
+    "name": "qS05_H1_907",
+    "kind": "hub",
+    "fanout": 63,
+    "conclusion": "\u2200 (a c a_1 b : Prop), Iff a (Or a_1 b) \u2192 Iff (Or a c) (Or (Or a_1 c) (Or b c))"
+   },
+   {
+    "name": "qS06_H1_145",
+    "kind": "hub",
+    "fanout": 63,
+    "conclusion": "\u2200 (\u03b1 : Sort u0) (P : Prop) (inst : Decidable P) (x y : \u03b1) (b : Bool) (x_1 y_1 : \u03b1),   Iff P (Eq b Bool.true) \u2192 Eq x x_1 \u2192 Eq y y_1 \u2192 Eq (ite P x y) (bif b then x_1 else y_1)"
+   }
+  ]
+ }
 }
