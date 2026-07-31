@@ -28,7 +28,7 @@
   .rate { font: .85rem "JetBrains Mono", monospace; color: var(--green); margin-top: .35rem; }
   table.live { width: 100%; border-collapse: collapse; font: .8rem "JetBrains Mono", monospace; margin-top: .6rem; }
   table.live td { border-top: 1px solid var(--line); padding: .5rem .2rem; vertical-align: top; }
-  table.live td:first-child { color: var(--gray); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; padding-top: .65rem; width: 11rem; }
+  table.live td:first-child { color: var(--gray); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; padding-top: .65rem; width: 13rem; }
   .ok { color: var(--green); font-weight: 700; }
   .fired { color: var(--red); font-weight: 700; }
   .mono { font-family: "JetBrains Mono", monospace; font-size: .8rem; }
@@ -42,7 +42,7 @@
 <body>
 <main>
   <div class="mark">The Cambrian Wave</div>
-  <div class="dateline">Recognition Physics Institute &middot; live instrument &middot; <span id="updated">first light 31 July 2026</span></div>
+  <div class="dateline">Recognition Physics Institute &middot; live instrument &middot; <span id="updated">updated 14:23 UTC 31 Jul 2026</span></div>
 
   <p style="margin-top:1.6rem">A machine is composing mathematics with itself right now. Each theorem counted
   below was conjectured and proved by the machine, and every proof was certified by the Lean kernel, the same
@@ -50,14 +50,15 @@
 
   <div class="focal">
     <div class="biglabel">Theorems certified, and counting</div>
-    <div class="bignum" id="count">10,618</div>
-    <div class="rate" id="rate">campaign live</div>
+    <div class="bignum" id="count">42,772</div>
+    <div class="rate" id="rate">first wave in verification</div>
   </div>
 
   <h2>Live status</h2>
   <table class="live">
     <tr><td>Stage</td><td id="stage">A: the frontier</td></tr>
-    <tr><td>Library processed</td><td><span id="shards">17 of 148 slices</span> <span id="eta" style="color:var(--gray)"></span></td></tr>
+    <tr><td>Library processed</td><td><span id="shards">21 of 148 slices</span> <span id="eta" style="color:var(--gray)"></span></td></tr>
+    <tr><td>Conjectured, awaiting certification</td><td id="pipe">32,760</td></tr>
     <tr><td>New mathematics still growing</td><td id="t1" class="ok">yes</td></tr>
     <tr><td>No padding with duplicates</td><td id="t2" class="ok">holding</td></tr>
     <tr><td>Failures nominal</td><td id="t3" class="ok">yes</td></tr>
@@ -67,7 +68,7 @@
   <p>Each bar is one slice of the library. Its height is the share of newly manufactured endpoints that the next
   round of composition can still grow. As long as the bars stay high, the machine is not running out of new
   mathematics; the campaign stops the day they decay.</p>
-  <div class="chart" id="chart"><span class="cap">chart arrives with the first live update</span></div>
+  <div class="chart" id="chart"><svg viewBox="0 0 720 118" width="100%" role="img" aria-label="share of endpoints still growing per slice"><line x1="0" y1="118" x2="720" y2="118" stroke="#0d0d0c" stroke-width="2"/><rect x="0.0" y="27.5" width="4.1" height="90.5" fill="#0d0d0c"/><rect x="4.9" y="24.4" width="4.1" height="93.6" fill="#0d0d0c"/><rect x="9.7" y="26.9" width="4.1" height="91.1" fill="#0d0d0c"/><rect x="14.6" y="25.0" width="4.1" height="93.0" fill="#0d0d0c"/><rect x="19.5" y="23.8" width="4.1" height="94.2" fill="#0d0d0c"/><rect x="24.3" y="25.0" width="4.1" height="93.0" fill="#0d0d0c"/><rect x="29.2" y="25.1" width="4.1" height="92.9" fill="#0d0d0c"/><rect x="34.1" y="26.4" width="4.1" height="91.6" fill="#0d0d0c"/><rect x="38.9" y="24.5" width="4.1" height="93.5" fill="#0d0d0c"/><rect x="43.8" y="25.2" width="4.1" height="92.8" fill="#0d0d0c"/><rect x="48.6" y="23.4" width="4.1" height="94.6" fill="#0d0d0c"/><rect x="53.5" y="24.1" width="4.1" height="93.9" fill="#0d0d0c"/><rect x="58.4" y="27.2" width="4.1" height="90.8" fill="#0d0d0c"/><rect x="63.2" y="26.4" width="4.1" height="91.6" fill="#0d0d0c"/><rect x="68.1" y="24.1" width="4.1" height="93.9" fill="#0d0d0c"/><rect x="73.0" y="23.8" width="4.1" height="94.2" fill="#0d0d0c"/><rect x="77.8" y="27.9" width="4.1" height="90.1" fill="#0d0d0c"/><rect x="82.7" y="26.1" width="4.1" height="91.9" fill="#0d0d0c"/><rect x="87.6" y="25.2" width="4.1" height="92.8" fill="#0d0d0c"/><rect x="92.4" y="23.6" width="4.1" height="94.4" fill="#0d0d0c"/><rect x="97.3" y="25.0" width="4.1" height="93.0" fill="#0d0d0c"/></svg></div>
   <div class="cap">share of endpoints still growing, per library slice. Instrument state: <a href="https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json">cambrian-wave.json</a> (machine-readable, updates with the campaign).</div>
 
   <h2>What this is</h2>
@@ -91,24 +92,26 @@
 </main>
 <script>
 (function () {
+  var SRC = "https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json";
   function fmt(n) { return n.toLocaleString("en-US"); }
   function ago(iso) {
     var s = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);
-    if (s < 90) return Math.round(s) + "s ago";
-    if (s < 5400) return Math.round(s / 60) + "m ago";
-    return (s / 3600).toFixed(1) + "h ago";
+    if (s < 90) return "updated " + Math.round(s) + "s ago";
+    if (s < 5400) return "updated " + Math.round(s / 60) + "m ago";
+    return "updated " + (s / 3600).toFixed(1) + "h ago";
   }
-  var SRC = "https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json";
   function poll() {
     fetch(SRC + "?t=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
       document.getElementById("count").textContent = fmt(d.verified_total);
-      document.getElementById("rate").textContent = d.rate_per_hour > 0 ? "+" + fmt(Math.round(d.rate_per_hour)) + " per hour" : "campaign live";
-      document.getElementById("stage").textContent = d.stage;
+      document.getElementById("rate").textContent = d.rate_per_hour > 0 ? "+" + fmt(Math.round(d.rate_per_hour)) + " per hour" : "first wave in verification";
+      document.getElementById("stage").textContent = d.stage + (d.stage_detail ? " (" + d.stage_detail + ")" : "");
       document.getElementById("shards").textContent = d.phase1_done + " of " + d.phase1_total + " slices";
       document.getElementById("eta").textContent = d.eta_hours ? "about " + d.eta_hours + "h of frontier remain" : "";
-      document.getElementById("updated").textContent = "updated " + ago(d.generated_at);
+      document.getElementById("pipe").textContent = fmt(d.in_flight);
+      document.getElementById("updated").textContent = ago(d.generated_at);
       ["t1", "t2", "t3"].forEach(function (k, i) {
         var el = document.getElementById(k), t = d.tripwires[i];
+        if (!t) return;
         el.textContent = t.ok ? t.label_ok : t.label_fired;
         el.className = t.ok ? "ok" : "fired";
       });

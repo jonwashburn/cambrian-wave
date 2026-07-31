@@ -1,5 +1,118 @@
-{"generated_at":"2026-07-31T13:55:00Z","stage":"A: the frontier","phase1_done":17,"phase1_total":148,"verified_total":10618,"rate_per_hour":0,"eta_hours":null,"tripwires":[
-{"id":"T1","ok":true,"label_ok":"yes","label_fired":"decayed, campaign stops and reports"},
-{"id":"T2","ok":true,"label_ok":"holding","label_fired":"padding detected, campaign stops and reports"},
-{"id":"T3","ok":true,"label_ok":"yes","label_fired":"anomaly, campaign stops and reports"}],
-"per_shard":[]}
+{
+ "generated_at": "2026-07-31T14:23:41Z",
+ "stage": "A: the frontier",
+ "stage_detail": "",
+ "phase1_done": 21,
+ "phase1_total": 148,
+ "verified_total": 42772,
+ "in_flight": 32760,
+ "rate_per_hour": 0,
+ "eta_hours": null,
+ "tripwires": [
+  {
+   "id": "T1",
+   "ok": true,
+   "label_ok": "yes",
+   "label_fired": "decayed: campaign stops and reports"
+  },
+  {
+   "id": "T2",
+   "ok": true,
+   "label_ok": "holding",
+   "label_fired": "padding detected: campaign stops and reports"
+  },
+  {
+   "id": "T3",
+   "ok": true,
+   "label_ok": "yes",
+   "label_fired": "anomaly: campaign stops and reports"
+  }
+ ],
+ "per_shard": [
+  {
+   "shard": 0,
+   "growing_pct": 82.3
+  },
+  {
+   "shard": 1,
+   "growing_pct": 85.1
+  },
+  {
+   "shard": 2,
+   "growing_pct": 82.8
+  },
+  {
+   "shard": 3,
+   "growing_pct": 84.5
+  },
+  {
+   "shard": 4,
+   "growing_pct": 85.7
+  },
+  {
+   "shard": 5,
+   "growing_pct": 84.6
+  },
+  {
+   "shard": 6,
+   "growing_pct": 84.4
+  },
+  {
+   "shard": 7,
+   "growing_pct": 83.3
+  },
+  {
+   "shard": 8,
+   "growing_pct": 85.0
+  },
+  {
+   "shard": 9,
+   "growing_pct": 84.4
+  },
+  {
+   "shard": 10,
+   "growing_pct": 86.0
+  },
+  {
+   "shard": 11,
+   "growing_pct": 85.3
+  },
+  {
+   "shard": 12,
+   "growing_pct": 82.5
+  },
+  {
+   "shard": 13,
+   "growing_pct": 83.3
+  },
+  {
+   "shard": 14,
+   "growing_pct": 85.4
+  },
+  {
+   "shard": 15,
+   "growing_pct": 85.6
+  },
+  {
+   "shard": 16,
+   "growing_pct": 81.9
+  },
+  {
+   "shard": 17,
+   "growing_pct": 83.6
+  },
+  {
+   "shard": 18,
+   "growing_pct": 84.3
+  },
+  {
+   "shard": 19,
+   "growing_pct": 85.8
+  },
+  {
+   "shard": 20,
+   "growing_pct": 84.6
+  }
+ ],
+ "campaign_stop": false
+}
