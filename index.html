@@ -68,7 +68,7 @@
   round of composition can still grow. As long as the bars stay high, the machine is not running out of new
   mathematics; the campaign stops the day they decay.</p>
   <div class="chart" id="chart"><span class="cap">chart arrives with the first live update</span></div>
-  <div class="cap">share of endpoints still growing, per library slice. Instrument state: <a href="cambrian-wave.json">cambrian-wave.json</a> (machine-readable, updates with the campaign).</div>
+  <div class="cap">share of endpoints still growing, per library slice. Instrument state: <a href="https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json">cambrian-wave.json</a> (machine-readable, updates with the campaign).</div>
 
   <h2>What this is</h2>
   <p>The Recognition Physics Institute built a composition organ over the largest library of certified mathematics
@@ -84,7 +84,7 @@
   <p class="mono" style="max-width:none">
     The institute: <a href="https://recognitionphysics.org">recognitionphysics.org</a><br>
     The public certified library: <a href="https://github.com/jonwashburn/recognition-science">github.com/jonwashburn/recognition-science</a><br>
-    Live instrument state: <a href="cambrian-wave.json">cambrian-wave.json</a>
+    Live instrument state: <a href="https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json">cambrian-wave.json</a>
   </p>
 
   <footer>Recognition Physics Institute &middot; this page is an instrument readout, not a claim beyond it</footer>
@@ -98,8 +98,9 @@
     if (s < 5400) return Math.round(s / 60) + "m ago";
     return (s / 3600).toFixed(1) + "h ago";
   }
+  var SRC = "https://jonwashburn.github.io/cambrian-wave/cambrian-wave.json";
   function poll() {
-    fetch("cambrian-wave.json?t=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
+    fetch(SRC + "?t=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
       document.getElementById("count").textContent = fmt(d.verified_total);
       document.getElementById("rate").textContent = d.rate_per_hour > 0 ? "+" + fmt(Math.round(d.rate_per_hour)) + " per hour" : "campaign live";
       document.getElementById("stage").textContent = d.stage;
