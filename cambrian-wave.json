@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-01T03:10:23Z",
+ "generated_at": "2026-08-01T03:13:20Z",
  "stage": "A: the frontier",
  "stage_detail": "",
  "phase1_done": 130,
  "phase1_total": 148,
  "verified_total": 1001239,
  "in_flight": 167197,
- "rate_per_hour": 320702.3,
+ "rate_per_hour": 319243.8,
  "eta_hours": 0.9,
  "tripwires": [
   {
