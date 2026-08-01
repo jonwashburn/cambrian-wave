@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-01T03:23:57Z",
+ "generated_at": "2026-08-01T03:26:57Z",
  "stage": "A: the frontier",
  "stage_detail": "",
- "phase1_done": 130,
+ "phase1_done": 142,
  "phase1_total": 148,
- "verified_total": 1001239,
- "in_flight": 71831,
- "rate_per_hour": 319725.1,
- "eta_hours": 0.9,
+ "verified_total": 1092349,
+ "in_flight": 74345,
+ "rate_per_hour": 427588.0,
+ "eta_hours": 0.3,
  "tripwires": [
   {
    "id": "T1",
@@ -354,6 +354,14 @@
    "growing_pct": 81.3
   },
   {
+   "shard": 81,
+   "growing_pct": 85.3
+  },
+  {
+   "shard": 83,
+   "growing_pct": 85.8
+  },
+  {
    "shard": 84,
    "growing_pct": 80.1
   },
@@ -418,6 +426,30 @@
    "growing_pct": 83.8
   },
   {
+   "shard": 103,
+   "growing_pct": 83.6
+  },
+  {
+   "shard": 106,
+   "growing_pct": 77.5
+  },
+  {
+   "shard": 107,
+   "growing_pct": 85.4
+  },
+  {
+   "shard": 108,
+   "growing_pct": 85.4
+  },
+  {
+   "shard": 109,
+   "growing_pct": 83.0
+  },
+  {
+   "shard": 110,
+   "growing_pct": 84.3
+  },
+  {
    "shard": 111,
    "growing_pct": 84.2
   },
@@ -468,6 +500,30 @@
   {
    "shard": 123,
    "growing_pct": 85.0
+  },
+  {
+   "shard": 124,
+   "growing_pct": 84.2
+  },
+  {
+   "shard": 125,
+   "growing_pct": 85.9
+  },
+  {
+   "shard": 126,
+   "growing_pct": 85.3
+  },
+  {
+   "shard": 127,
+   "growing_pct": 85.5
+  },
+  {
+   "shard": 128,
+   "growing_pct": 83.5
+  },
+  {
+   "shard": 129,
+   "growing_pct": 83.1
   },
   {
    "shard": 130,
@@ -544,7 +600,7 @@
  ],
  "campaign_stop": true,
  "discoveries": {
-  "generated": "2026-08-01 03:22:19",
+  "generated": "2026-08-01 03:23:46",
   "banked": 1022919,
   "parent_usage_gen1": 0.6094,
   "items": [
