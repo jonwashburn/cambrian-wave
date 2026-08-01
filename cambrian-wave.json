@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-01T03:21:14Z",
+ "generated_at": "2026-08-01T03:23:57Z",
  "stage": "A: the frontier",
  "stage_detail": "",
  "phase1_done": 130,
  "phase1_total": 148,
  "verified_total": 1001239,
- "in_flight": 167197,
- "rate_per_hour": 319889.3,
+ "in_flight": 71831,
+ "rate_per_hour": 319725.1,
  "eta_hours": 0.9,
  "tripwires": [
   {
@@ -544,9 +544,9 @@
  ],
  "campaign_stop": true,
  "discoveries": {
-  "generated": "2026-08-01 03:07:03",
-  "banked": 890648,
-  "parent_usage_gen1": 0.6121,
+  "generated": "2026-08-01 03:22:19",
+  "banked": 1022919,
+  "parent_usage_gen1": 0.6094,
   "items": [
    {
     "name": "qS29_H1_560",
@@ -573,16 +573,16 @@
     "conclusion": "\u2200 (\u03b1 : Sort u0) (b : Prop) (s : Decidable b) (x y : \u03b1) (b_1 : Bool) (x_1 y_1 : \u03b1),   Eq b (Eq b_1 Bool.true) \u2192     (Eq b_1 Bool.true \u2192 Eq x x_1) \u2192 (Not (Eq b_1 Bool.true) \u2192 Eq y y_1) \u2192 Eq (ite b x y) (bif b_1 then x_1 el"
    },
    {
+    "name": "qS113_H1_1254",
+    "kind": "hub",
+    "fanout": 65,
+    "conclusion": "\u2200 (\u03b1 : Sort u0) (b : Bool) (y x : \u03b1), Eq (ite (Not (Eq b Bool.true)) y x) (bif b then x else y)"
+   },
+   {
     "name": "qS06_H1_234",
     "kind": "hub",
     "fanout": 64,
     "conclusion": "\u2200 (a b c : Prop), Not (Or b c) \u2192 Iff (Or (Or a b) c) (Or a c)"
-   },
-   {
-    "name": "qS05_H1_907",
-    "kind": "hub",
-    "fanout": 63,
-    "conclusion": "\u2200 (a c a_1 b : Prop), Iff a (Or a_1 b) \u2192 Iff (Or a c) (Or (Or a_1 c) (Or b c))"
    }
   ]
  }
