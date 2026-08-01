@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-01T03:55:59Z",
+ "generated_at": "2026-08-01T03:58:37Z",
  "stage": "A: the frontier",
  "stage_detail": "",
  "phase1_done": 147,
  "phase1_total": 148,
  "verified_total": 1127011,
  "in_flight": 39184,
- "rate_per_hour": 255561.1,
+ "rate_per_hour": 257119.2,
  "eta_hours": 0.0,
  "tripwires": [
   {
@@ -620,7 +620,7 @@
  ],
  "campaign_stop": true,
  "discoveries": {
-  "generated": "2026-08-01 03:47:03",
+  "generated": "2026-08-01 03:57:24",
   "banked": 1164927,
   "parent_usage_gen1": 0.6066,
   "items": [
