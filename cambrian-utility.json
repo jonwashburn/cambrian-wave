@@ -1,10 +1,20 @@
 {
- "generated": "2026-08-01 02:51 UTC",
- "registered": 759038,
+ "generated": "2026-08-01 03:06 UTC",
+ "registered": 890648,
  "convergent_in_top": 3,
  "leaders": [
   {
    "rank": 1,
+   "name": "qS142_H1_1207",
+   "fanout": 69,
+   "shard": 142,
+   "conclusion": "\u2200 (\u03b1 : Sort u0) (b : Prop) (s : Decidable b) (x y : \u03b1) (b_1 : Bool) (x_1 y_1 : \u03b1), Eq b (Eq b_1 Bool.true) \u2192 (Eq b_1 Bool.true \u2192 Eq x x_1) \u2192 (Not (Eq b_1 Bool.true) \u2192 Eq y y_1) \u2192 Eq (ite b x y) (bif b_1 then x_1 else y_1)",
+   "gloss": "",
+   "control_fanout": null,
+   "convergent": false
+  },
+  {
+   "rank": 2,
    "name": "qS06_H1_234",
    "fanout": 64,
    "shard": 6,
@@ -14,7 +24,7 @@
    "convergent": true
   },
   {
-   "rank": 2,
+   "rank": 3,
    "name": "qS05_H1_907",
    "fanout": 63,
    "shard": 5,
@@ -24,7 +34,7 @@
    "convergent": true
   },
   {
-   "rank": 3,
+   "rank": 4,
    "name": "qS06_H1_145",
    "fanout": 63,
    "shard": 6,
@@ -34,7 +44,7 @@
    "convergent": false
   },
   {
-   "rank": 4,
+   "rank": 5,
    "name": "qS08_H1_290",
    "fanout": 62,
    "shard": 8,
@@ -44,7 +54,7 @@
    "convergent": true
   },
   {
-   "rank": 5,
+   "rank": 6,
    "name": "qS42_H1_434",
    "fanout": 62,
    "shard": 42,
@@ -54,7 +64,7 @@
    "convergent": false
   },
   {
-   "rank": 6,
+   "rank": 7,
    "name": "qS66_H1_1198",
    "fanout": 62,
    "shard": 66,
@@ -64,7 +74,7 @@
    "convergent": false
   },
   {
-   "rank": 7,
+   "rank": 8,
    "name": "qS70_H1_324",
    "fanout": 62,
    "shard": 70,
@@ -74,7 +84,7 @@
    "convergent": false
   },
   {
-   "rank": 8,
+   "rank": 9,
    "name": "qS17_H1_511",
    "fanout": 61,
    "shard": 17,
@@ -84,22 +94,12 @@
    "convergent": false
   },
   {
-   "rank": 9,
+   "rank": 10,
    "name": "qS33_H1_196",
    "fanout": 61,
    "shard": 33,
    "conclusion": "\u2200 (\u03b1 : Type u0) (x : BEq \u03b1) (x_1 : Hashable \u03b1) (inst : EquivBEq \u03b1) (inst_1 : LawfulHashable \u03b1) (l : List \u03b1) (k : \u03b1) (f : Unit \u2192 Unit), List.Pairwise (fun (a b : \u03b1) => Eq (BEq.beq a b) Bool.false) l \u2192 Eq (Std.ExtDHashMap.size (Std.ExtDHashMap.Const.modify (Std.ExtDHashMap.Const.unitOfList l) k f)) (List.length l)",
    "gloss": "",
-   "control_fanout": null,
-   "convergent": false
-  },
-  {
-   "rank": 10,
-   "name": "qS39_H1_628",
-   "fanout": 61,
-   "shard": 39,
-   "conclusion": "\u2200 (\u03b1 : Sort u0) (\u03b2 : Sort u1) (f : \u03b1 \u2192 \u03b2) (\u03b2_1 : Sort u2) (q : \u03b2_1 \u2192 Prop) (e : Equiv (Subtype fun (a : \u03b2 \u2192 \u03b1) => And (Function.LeftInverse a f) (Function.RightInverse a f)) (Subtype fun (b : \u03b2_1) => q b)), Iff (Function.Bijective f) (Exists fun (b : \u03b2_1) => q b)",
-   "gloss": "If a process can be undone step for step in both directions, the forward map and the undoing pair carry the same information.",
    "control_fanout": null,
    "convergent": false
   }
