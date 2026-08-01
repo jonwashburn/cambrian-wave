@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-01T02:53:30Z",
+ "generated_at": "2026-08-01T02:56:29Z",
  "stage": "A: the frontier",
  "stage_detail": "",
- "phase1_done": 95,
+ "phase1_done": 112,
  "phase1_total": 148,
- "verified_total": 745829,
- "in_flight": 426606,
- "rate_per_hour": 64835.1,
- "eta_hours": 6.3,
+ "verified_total": 873617,
+ "in_flight": 296837,
+ "rate_per_hour": 194188.2,
+ "eta_hours": 2.8,
  "tripwires": [
   {
    "id": "T1",
@@ -374,8 +374,52 @@
    "growing_pct": 84.8
   },
   {
+   "shard": 91,
+   "growing_pct": 82.7
+  },
+  {
+   "shard": 93,
+   "growing_pct": 86.4
+  },
+  {
+   "shard": 94,
+   "growing_pct": 83.7
+  },
+  {
+   "shard": 95,
+   "growing_pct": 84.2
+  },
+  {
+   "shard": 96,
+   "growing_pct": 85.4
+  },
+  {
+   "shard": 97,
+   "growing_pct": 84.1
+  },
+  {
+   "shard": 98,
+   "growing_pct": 85.2
+  },
+  {
    "shard": 99,
    "growing_pct": 83.8
+  },
+  {
+   "shard": 115,
+   "growing_pct": 84.7
+  },
+  {
+   "shard": 118,
+   "growing_pct": 84.7
+  },
+  {
+   "shard": 119,
+   "growing_pct": 84.4
+  },
+  {
+   "shard": 120,
+   "growing_pct": 84.2
   },
   {
    "shard": 121,
@@ -388,6 +432,30 @@
   {
    "shard": 123,
    "growing_pct": 85.0
+  },
+  {
+   "shard": 139,
+   "growing_pct": 84.4
+  },
+  {
+   "shard": 140,
+   "growing_pct": 85.0
+  },
+  {
+   "shard": 141,
+   "growing_pct": 83.3
+  },
+  {
+   "shard": 142,
+   "growing_pct": 86.4
+  },
+  {
+   "shard": 143,
+   "growing_pct": 83.1
+  },
+  {
+   "shard": 144,
+   "growing_pct": 84.5
   },
   {
    "shard": 145,
