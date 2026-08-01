@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-01T00:07:29Z",
+ "generated_at": "2026-08-01T00:09:57Z",
  "stage": "A: the frontier",
  "stage_detail": "slices 73, 74, 75, 76: probes",
  "phase1_done": 73,
  "phase1_total": 148,
  "verified_total": 618252,
  "in_flight": 198363,
- "rate_per_hour": 70701.7,
- "eta_hours": 14.0,
+ "rate_per_hour": 70752.2,
+ "eta_hours": 13.9,
  "tripwires": [
   {
    "id": "T1",
@@ -324,7 +324,7 @@
  ],
  "campaign_stop": false,
  "discoveries": {
-  "generated": "2026-08-01 00:06:26",
+  "generated": "2026-08-01 00:08:36",
   "banked": 628479,
   "parent_usage_gen1": 0.6362,
   "items": [
