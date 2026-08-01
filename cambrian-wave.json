@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-01T01:52:07Z",
+ "generated_at": "2026-08-01T01:54:45Z",
  "stage": "A: the frontier",
  "stage_detail": "slices 85, 86, 87, 88: probes",
  "phase1_done": 84,
  "phase1_total": 148,
  "verified_total": 682357,
- "in_flight": 427306,
- "rate_per_hour": 21963.2,
+ "in_flight": 449238,
+ "rate_per_hour": 21941.6,
  "eta_hours": 10.0,
  "tripwires": [
   {
