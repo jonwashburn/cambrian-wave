@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-01 03:07 UTC",
- "registered": 890648,
+ "generated": "2026-08-01 03:22 UTC",
+ "registered": 1022919,
  "convergent_in_top": 3,
  "leaders": [
   {
@@ -15,6 +15,16 @@
   },
   {
    "rank": 2,
+   "name": "qS113_H1_1254",
+   "fanout": 65,
+   "shard": 113,
+   "conclusion": "\u2200 (\u03b1 : Sort u0) (b : Bool) (y x : \u03b1), Eq (ite (Not (Eq b Bool.true)) y x) (bif b then x else y)",
+   "gloss": "",
+   "control_fanout": null,
+   "convergent": false
+  },
+  {
+   "rank": 3,
    "name": "qS06_H1_234",
    "fanout": 64,
    "shard": 6,
@@ -24,7 +34,7 @@
    "convergent": true
   },
   {
-   "rank": 3,
+   "rank": 4,
    "name": "qS05_H1_907",
    "fanout": 63,
    "shard": 5,
@@ -34,7 +44,7 @@
    "convergent": true
   },
   {
-   "rank": 4,
+   "rank": 5,
    "name": "qS06_H1_145",
    "fanout": 63,
    "shard": 6,
@@ -44,7 +54,7 @@
    "convergent": false
   },
   {
-   "rank": 5,
+   "rank": 6,
    "name": "qS08_H1_290",
    "fanout": 62,
    "shard": 8,
@@ -54,7 +64,7 @@
    "convergent": true
   },
   {
-   "rank": 6,
+   "rank": 7,
    "name": "qS42_H1_434",
    "fanout": 62,
    "shard": 42,
@@ -64,7 +74,7 @@
    "convergent": false
   },
   {
-   "rank": 7,
+   "rank": 8,
    "name": "qS66_H1_1198",
    "fanout": 62,
    "shard": 66,
@@ -74,7 +84,7 @@
    "convergent": false
   },
   {
-   "rank": 8,
+   "rank": 9,
    "name": "qS70_H1_324",
    "fanout": 62,
    "shard": 70,
@@ -84,22 +94,12 @@
    "convergent": false
   },
   {
-   "rank": 9,
+   "rank": 10,
    "name": "qS17_H1_511",
    "fanout": 61,
    "shard": 17,
    "conclusion": "\u2200 (\u03b1 : Type u0) (inst : PseudoMetricSpace \u03b1) (s : Set \u03b1) (c : Real) (\u03b2 : Sort u1) (q : \u03b2 \u2192 Prop) (e : Equiv (Subtype fun (a : Real) => And (LE.le c a) (\u2200 \u2983x : \u03b1\u2984, Membership.mem s x \u2192 \u2200 \u2983y : \u03b1\u2984, Membership.mem s y \u2192 LE.le (Dist.dist x y) a)) (Subtype fun (b : \u03b2) => q b)), Iff (Bornology.IsBounded s) (Exists fun (b : \u03b2) => q b)",
    "gloss": "Everything beyond a threshold distance, collected with its certificate, is the same region no matter how the threshold is phrased.",
-   "control_fanout": null,
-   "convergent": false
-  },
-  {
-   "rank": 10,
-   "name": "qS33_H1_196",
-   "fanout": 61,
-   "shard": 33,
-   "conclusion": "\u2200 (\u03b1 : Type u0) (x : BEq \u03b1) (x_1 : Hashable \u03b1) (inst : EquivBEq \u03b1) (inst_1 : LawfulHashable \u03b1) (l : List \u03b1) (k : \u03b1) (f : Unit \u2192 Unit), List.Pairwise (fun (a b : \u03b1) => Eq (BEq.beq a b) Bool.false) l \u2192 Eq (Std.ExtDHashMap.size (Std.ExtDHashMap.Const.modify (Std.ExtDHashMap.Const.unitOfList l) k f)) (List.length l)",
-   "gloss": "",
    "control_fanout": null,
    "convergent": false
   }
