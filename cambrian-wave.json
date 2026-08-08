@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-08T07:36:13Z",
+ "generated_at": "2026-08-08T07:38:51Z",
  "stage": "A: the frontier",
  "stage_detail": "",
  "phase1_done": 148,
@@ -620,7 +620,7 @@
  ],
  "campaign_stop": false,
  "discoveries": {
-  "generated": "2026-08-08 07:22:34",
+  "generated": "2026-08-08 07:37:44",
   "banked": 1164927,
   "parent_usage_gen1": 0.6066,
   "items": [
